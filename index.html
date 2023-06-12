@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/styles.css">
+  <style>
+    @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+
+  #bootstrapForm {
+      background-image: linear-gradient(to right, #9306e4, #f6d365);
+      background-size: 200% auto;
+      animation: gradientAnimation 5s linear infinite;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+#bootstrapForm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Limited Time Offer section */
+#limited-offer {
+  background: linear-gradient(to right, #9306e4, #f6d365);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+  text-shadow: #000000;
+  animation: blink 1s linear infinite;
+}
+
+
+body {
+  font-family: "regola";
+  font-weight: 400;
+  color: white;
+}
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: .5;}
+  100% {opacity: 1;}
+}
+  </style>
+</head>
+<body>
+  <div class="min-h-screen bg-gradient-to-r from-orange-500 to-purple-600 flex items-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl text-white font-bold mb-8"></h1>
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSdcxQZwGVKKVWcvTN__IOBF5syvuGfy5-nvmF8WwVOd0NHQig/formResponse"
+            target="_self"
+            id="bootstrapForm"
+            method="POST"
+            class="bg-white rounded-xl p-8 mb-4 transition-all ease-in-out duration-500">
+        <fieldset>
+          <h2 class="text-3xl mb-4 text-white-700 font-semibold">Mealfunnels Survey form (2023)</h2>
+          <p class="text-sm mb-4 text-white-500">Welcome to Mealfunnels! We're dedicated to helping you reach your health and nutrition goals, and we're here to create a custom meal plan that works just for you. To get started, please fill out the following form with as much detail as possible. We'll use the information you provide to create a meal plan that takes into account your personal preferences, dietary restrictions, and health goals. Thank you for taking the time to complete this survey, and we look forward to helping you achieve a healthier and happier lifestyle.</p>
+        </fieldset>
+        
+        <!-- Field type: "short" id: "1241914454" -->
+        <fieldset class="mb-6">
+          <legend class="text-lg font-semibold mb-2 text-white-700" for="1241914454">Email Address	</legend>
+          <div class="form-group">
+            <input id="621597622" type="Email" name="entry.621597622" class="border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+          </div>
+        </fieldset>
+        
+        <!-- Field type: "short" id: "208462405" -->
+        <fieldset class="mb-6">
+          <legend class="text-lg font-semibold mb-2 text-white-700" for="208462405">Enter Your Name:</legend>
+          <div class="form-group">
+            <input id="1704870588" type="text" name="entry.1704870588" class="border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+          </div>
+        </fieldset>
+        
+        <!-- Field type: "short" id: "1165107487" -->
+        <fieldset class="mb-4">
+          <legend class="text-lg font-semibold mb-2 text-white-700" for="1165107487">Enter Your Age:</legend>
+          <div class="form-group">
+            <input id="880842848" type="text" name="entry.880842848"  class="border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+      
+        </div>
+    </fieldset>
+    <fieldset class="mb-4">
+  <legend class="text-lg font-semibold mb-2 text-black-700" for="961108092">Enter your height </legend>
+  <div class="form-group">
+    <input id="980444896" type="text" name="entry.980444896" class="border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+  </div>
+  <div class="form-group">
+    <label class="flex items-center">
+      <input type="radio" name="entry.unit" value="cm" required>
+      <span class="ml-2">cm</span>
+    </label>
+    <label class="flex items-center">
+      <input type="radio" name="entry.unit" value="ft" required>
+      <span class="ml-2">ft</span>
+    </label>
+  </div>
+</fieldset>
+<fieldset class="mb-4">
+  <legend class="text-lg font-semibold mb-2 text-white-700" for="1988081262">Enter your weight</legend>
+  <div class="form-group">
+    <input id="637763509" type="text" name="entry.637763509" class="border border-white-300 rounded-lg w-full py-2 px-3 text-gray-700" required>
+  </div>
+  <div class="form-group">
+    <label class="flex items-center">
+      <input type="radio" name="entry.unit" value="lbs" required>
+      <span class="ml-2">lbs</span>
+    </label>
+    <label class="flex items-center">
+      <input type="radio" name="entry.unit" value="kg" required>
+      <span class="ml-2">kg</span>
+    </label>
+  </div>
+</fieldset>
+
+<fieldset class="mb-4">
+  <legend class="text-lg font-semibold mb-2 text-white-700" for="1963117056">What are your personal health and nutrition goals ?</legend>
+  <div class="form-group">
+    <div class="checkbox mb-2">
+      <label class="flex items-center">
+        <input type="checkbox" name="entry.127313612" value="Lose weight" >
+        <span class="ml-2">Lose weight</span>
+      </label>
+    </div>
+    <div class="checkbox mb-2">
+      <label class="flex items-center">
+        <input type="checkbox" name="entry.127313612" value="Build muscle" >
+        <span class="ml-2">Build muscle</span>
+      </label>
+    </div>
+    <div class="checkbox mb-2">
+      <label class="flex items-center">
+        <input type="checkbox" name="entry.127313612" value="Improve overall health and wellness" >
+        <span class="ml-2">Improve overall health and wellness</span>
+      </label>
+    </div>
+    <div class="checkbox mb-2">
+      <label class="flex items-center">
+        <input type="checkbox" name="entry.127313612" value="Maintain current weight" >
+        <span class="ml-2">Maintain current weight</span>
+      </label>
+    </div>
+    <div class="checkbox">
+      <label class="flex items-center">
+        <input type="checkbox" name="entry.127313612" value="Other" >
+        <span class="ml-2">Other</span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+
+    
+<fieldset class="mb-4">
+  <legend class="text-lg font-semibold mb-2 text-white-700" for="780621364">What is your daily calorie intake goal ?</legend>
+  <div class="form-group">
+    <div class="radio mb-2">
+      <label class="flex items-center">
+        <input type="radio" name="entry.1443894547" value="1000-1200 calories" required>
+        <span class="ml-2">1000-1200 calories</span>
+      </label>
+    </div>
+    <div class="radio mb-2">
+      <label class="flex items-center">
+        <input type="radio" name="entry.1443894547" value="1200-1500 calories" required>
+        <span class="ml-2">1200-1500 calories</span>
+      </label>
+    </div>
+    <div class="radio mb-2">
+      <label class="flex items-center">
+        <input type="radio" name="entry.1443894547" value="1500-1800 calories" required>
+        <span class="ml-2">1500-1800 calories</span>
+      </label>
+    </div>
+    <div class="radio mb-2">
+      <label class="flex items-center">
+        <input type="radio" name="entry.1443894547" value="1800-2000 calories" required>
+        <span class="ml-2">1800-2000 calories</span>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="flex items-center">
+        <input type="radio" name="entry.1443894547" value="More than 2000 calories" required>
+        <span class="ml-2">More than 2000 calories</span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+
+        <!-- Field type: "checkboxes" id: "648105299" -->
+        <fieldset class="mb-4">
+          <legend class="text-lg font-semibold mb-2 text-white-700" for="648105299">How many meals do you eat per day on average ?</legend>
+          <div class="form-group">
+            <div class="radio mb-2">
+              <label class="flex items-center">
+                <input type="radio" name="entry.1370621833" value="3" required>
+                <span class="ml-2">3</span>
+              </label>
+            </div>
+            <div class="radio mb-2">
+              <label class="flex items-center">
+                <input type="radio" name="entry.1370621833" value="4" required>
+                <span class="ml-2">4</span>
+              </label>
+            </div>
+            <div class="radio mb-2">
+              <label class="flex items-center">
+                <input type="radio" name="entry.1370621833" value="5" required>
+                <span class="ml-2">5</span>
+              </label>
+            </div>
+            <div class="radio">
+              <label class="flex items-center">
+                <input type="radio" name="entry.1370621833" value="6 or more" required>
+                <span class="ml-2">6 or more</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- Field type: "checkboxes" id: "1223175999" -->
+        <fieldset class="mb-4">
+          <legend class="text-lg font-semibold mb-2 text-white-700"for="1223175999">Are there any dietary restrictions or allergies you need to account for ?</legend>
+          <div class="form-group">
+            <div class="checkbox mb-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="entry.1449508704" value="Gluten-free" >
+                <span class="ml-2">Gluten-free
+                </span>
+            </label>
+          </div>
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.1449508704" value="Lactose-intolerant" >
+              <span class="ml-2">Lactose-intolerant</span>
+            </label>
+          </div>
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.1449508704" value="Vegan">
+              <span class="ml-2">Vegan</span>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.1449508704" value="None">
+              <span class="ml-2">None</span>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.1449508704" value="Other :" >
+              <span class="ml-2">Other :</span>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      
+      <!-- Field type: "checkboxes" id: "1822908706" -->
+      <fieldset class="mb-4">
+        <legend class="text-lg font-semibold mb-2 text-white-700" for="1822908706">What types of food do you enjoy eating   and find satisfying</legend>
+        <div class="form-group">
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734177320" value="Meat and poultry" >
+              <span class="ml-2">Meat and poultry</span>
+            </label>
+          </div>
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734177320" value="Seafood">
+              <span class="ml-2">Seafood</span>
+            </label>
+          </div>
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734177320" value="Vegetables" >
+              <span class="ml-2">Vegetables</span>
+            </label>
+          </div>
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734177320" value="Fruits" >
+              <span class="ml-2">Fruits</span>
+            </label>
+          </div>
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734177320" value="Grains and starches" >
+              <span class="ml-2">Grains and starches</span>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734177320" value="__other_option__" >
+              <input type="text" name="entry.734177320.other_option_response" placeholder="custom value" class="border rounded w-full py-2 px-3 ml-2">
+            </label>
+          </div>
+        </div>
+      </fieldset
+      <!-- Field type: "checkboxes" id: "532717463" -->
+      <fieldset class="mb-4">
+        <legend class="text-lg font-semibold mb-2 text-white-700" for="532717463">Do you have a preferred macronutrient breakdown ?</legend>
+        <div class="form-group">
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734310642" value="High protein" >
+              <span class="ml-2">High protein</span>
+            </label>
+          </div>
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734310642" value="High fiber" >
+              <span class="ml-2">High fiber</span>
+            </label>
+          </div>
+          <div class="checkbox mb-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734310642" value="Low-carb" >
+              <span class="ml-2">Low-carb</span>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label class="flex items-center">
+              <input type="checkbox" name="entry.734310642" value="No preference" >
+              <span class="ml-2">No preference</span>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      
+      <!-- Field type: "choices" id: "1408523643" -->
+      <fieldset class="mb-4">
+        <legend class="text-lg font-semibold mb-2 text-white-700" for="1408523643">Would you prefer to incorporate snacks into your meal plan?</legend>
+        <div class="form-group">
+          <div class="radio mb-2">
+            <label class="flex items-center">
+              <input type="radio" name="entry.738137780" value="Yes" required>
+              <span class="ml-2">Yes</span>
+            </label>
+          </div>
+          <div class="radio">
+            <label class="flex items-center">
+              <input type="radio" name="entry.738137780" value="No" required>
+              <span class="ml-2">No</span>
+            </label>
+          </div>
+        </div>
+
+<!-- Field type: "choices" id: "1996759733" -->
+<div id="limited-offer">
+  <legend class="text-base font-bold mb-8">LIMITED TIME OFFER!</legend>
+  <!-- Rest of the content here -->
+    </div>
+    <!-- Field type: "section" id: "1684762206" -->
+    <fieldset>
+      <legend for="1684762206"></legend>
+      <div class="form-group mb-4">
+          <p class="help-block mb-4">50% Off Limited Time Offer: Personalized Meal Plan for a Healthier You ! 
+🔥Get ready to revolutionize your health and nutrition with our personalized meal plan! 💰For a limited time only, we&#x27;re offering a 50% discount on our meal plan, which is regularly priced at $39.99 (USD). That&#x27;s right, for just $19.99 US, you&#x27;ll receive a custom meal plan tailored to your specific health and nutrition goals, dietary restrictions, food preferences, and meal schedule.🍴
+Don&#x27;t miss this opportunity to take control of your health 💪 and improve your diet. Our meal plan includes delicious and satisfying meals, snacks 🍫, and a macronutrient breakdown that will help you reach your goals and keep you on track.
+🏃‍♀️Hurry, this offer won&#x27;t last forever. Order your personalized meal plan now and start eating healthier and happier!🌟&quot;</p>
+      </div>
+  </fieldset>
+
+
+  <!-- Field type: "choices" id: "1996759733" -->
+  <fieldset>
+      <legend for="1996759733"></legend>
+      <div class="form-group mb-4">
+          <p class="help-block2 mb-2"> Get Your Personalised  Mealfunnels Meal Plan Now ! :</p>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="entry.366819695" value="US$19.99" required>
+                  US$19.99
+              </label>
+          </div>
+      </div>
+  </fieldset>
+
+  <input type="hidden" name="fvv" value="1">
+  <input type="hidden" name="fbzx" value="3831311249005741701">
+  <!--
+      CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+      This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+      Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+      We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+  -->
+  <input type="hidden" name="pageHistory" value="0,1,2,3,4,5,6,7,8,9,10,11,12">
+
+  <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+  
+<style>
+  .btn {
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background:linear-gradient(to left, #9306e4, #f6d365);
+    border-radius: 25px;
+    padding: 15px 30px;  /* Increase size */
+    cursor: pointer;
+    position: center;
+  }
+
+  .btn-primary {
+    color: white;
+    padding: 10px 30px;  /* Increase size */
+    border-radius: 25px;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  .help-block {
+    color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-color: #007bff;
+  }
+</style>
+</form>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+  $('#bootstrapForm').submit(function (event) {
+      event.preventDefault()
+      var extraData = {}
+      $('#bootstrapForm').ajaxSubmit({
+          data: extraData,
+          dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+          error: function () {
+              // Submit of form should be successful but JSONP callback will fail because Google Forms
+              // does not support it, so this is handled as a failure.
+              // alert('Form Submitted. Thanks.')
+              // Redirect the user to a custom Stripe page:
+              window.location = 'https://buy.stripe.com/test_fZe2ad7HP0pc3oA146'
+          }
+      })
+  });
+});
+</script>
+</html>

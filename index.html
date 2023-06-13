@@ -66,6 +66,7 @@ body {
   </style>
 </head>
 <body>
+
   <div class="min-h-screen flex items-center" style="background: linear-gradient(to right, black, rgb(49, 49, 48));">
     <div class="container mx-auto px-4">
       <h1 class="text-5xl text-white font-bold mb-8"></h1>
@@ -75,11 +76,13 @@ body {
             method="POST"
             class="bg-white rounded-xl p-8 mb-4 transition-all ease-in-out duration-500"
             style="box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);">
-        <fieldset>
-          <h4 class="text-1xl mb-4 text-black font-semibold">Mealfunnels </h4>
-          <p class="text-2xl mb-4 text-white-500">Welcome to Mealfunnels! We're dedicated to helping you reach your health and nutrition goals, and we're here to create a custom meal plan that works just for you. To get started, please fill out the following form with as much detail as possible. We'll use the information you provide to create a meal plan that takes into account your personal preferences, dietary restrictions, and health goals. Thank you for taking the time to complete this survey, and we look forward to helping you achieve a healthier and happier lifestyle.</p>
-
-        </fieldset>
+            
+            <fieldset class="form-section" id="introduction-section">
+              <h4 class="text-1xl mb-4 text-black font-semibold">Mealfunnels </h4>
+              <p class="text-2xl mb-4 text-white-500">Welcome to Mealfunnels! We're dedicated to helping you reach your health and nutrition goals, and we're here to create a custom meal plan that works just for you. To get started, please fill out the following form with as much detail as possible. We'll use the information you provide to create a meal plan that takes into account your personal preferences, dietary restrictions, and health goals. Thank you for taking the time to complete this survey, and we look forward to helping you achieve a healthier and happier lifestyle.</p>
+              <button type="button" class="btn btn-primary" onclick="showNextSection('introduction-section', 'section-1')">Next</button>
+            </fieldset>
+            
         <!-- Form Section 1 -->
         <fieldset class="form-section" id="section-1">
           <legend class="text-lg font-semibold mb-2 text-white-700" for="1241914454">Email Address</legend>
@@ -538,6 +541,14 @@ body {
     }
   </style>
   <script>
+    function showNextSection(currentSectionId, nextSectionId) {
+    // hide current section
+    document.getElementById(currentSectionId).style.display = 'none';
+    
+    // show next section
+    document.getElementById(nextSectionId).style.display = 'block';
+}
+
     function goToNextSection(currentSectionId, nextSectionId, inputName) {
         let sectionElement = document.getElementById(currentSectionId);
         let inputs = sectionElement.querySelectorAll('input[name="' + inputName + '"]');

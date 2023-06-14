@@ -1,6 +1,4 @@
-
-   
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -12,18 +10,28 @@
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
-       }
+    }
+  
     #bootstrapForm {
-        background-image: linear-gradient(to right, #9306e4, #f6d365);
-        background-size: 100% auto;
-        animation: gradientAnimation 5s linear infinite;
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-  
-  
+    background-image: linear-gradient(to right, #9306e4, #f6d365);
+    background-size: 100% auto;
+    animation: gradientAnimation 5s linear infinite;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px; /* Add padding to make it look nicer on smaller screens */
+}
+
+@media (max-width: 768px) {
+    #bootstrapForm {
+        max-width: 100%; /* Allow the form to take full width on smaller screens */
+        box-sizing: border-box; /* To ensure padding doesn't add extra width */
+    }
+}
 
   
   /* Limited Time Offer section */
@@ -53,7 +61,10 @@
   
   .submit-button {
     display: none;
-  }
+ 
+
+}
+
     </style>
   </head>
   <body>
@@ -67,12 +78,15 @@
                   class="bg-white rounded-xl p-8 mb-4 transition-all ease-in-out duration-500"
                   style="box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5); width: 60%; margin: auto;">
                   <!-- Your form fields go here -->
-              <fieldset class="form-section" id="introduction-section">
-                <h4 class="text-1xl mb-4 text-black font-semibold">Mealfunnels </h4>
-                <p  class="text-xl mb-4 text-white-500">Welcome to Mealfunnels! We're dedicated to helping you reach your health and nutrition goals, and we're here to create a custom meal plan that works just for you. To get started, please fill out the following form with as much detail as possible. We'll use the information you provide to create a meal plan that takes into account your personal preferences, dietary restrictions, and health goals. Thank you for taking the time to complete this survey, and we look forward to helping you achieve a healthier and happier lifestyle.</p>
-                <button type="button" class="btn btn-primary" onclick="showNextSection('introduction-section', 'section-1')">Next</button>
-              </fieldset>
-              
+
+              <div class="responsive-container">
+  <fieldset class="form-section" id="introduction-section">
+    <h4 class="text-1xl mb-4 text-black font-semibold">Mealfunnels </h4>
+    <p  class="text-xl mb-4 text-white-500">Welcome to Mealfunnels! We're dedicated to helping you reach your health and nutrition goals, and we're here to create a custom meal plan that works just for you. To get started, please fill out the following form with as much detail as possible. We'll use the information you provide to create a meal plan that takes into account your personal preferences, dietary restrictions, and health goals. Thank you for taking the time to complete this survey, and we look forward to helping you achieve a healthier and happier lifestyle.</p>
+    <button type="button" class="btn btn-primary" onclick="showNextSection('introduction-section', 'section-1')">Next</button>
+  </fieldset>
+</div>
+
           <!-- Form Section 1 -->
           <fieldset class="form-section" id="section-1">
             <legend class="text-lg font-semibold mb-2 text-white-700" for="1241914454">Email Address</legend>
@@ -698,14 +712,31 @@
   }
   
     </script>
+    <script>
+      $(document).ready(function() {
+        $('#bootstrapForm').submit(function (event) {
+            event.preventDefault()
+            var extraData = {}
+            $('#bootstrapForm').ajaxSubmit({
+                data: extraData,
+                dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+                error: function () {
+                    // Submit of form should be successful but JSONP callback will fail because Google Forms
+                    // does not support it, so this is handled as a failure.
+                    // alert('Form Submitted. Thanks.')
+                    // Redirect the user to a custom Stripe page:
+                    window.location = 'https://www.mealfunnels.com/stripe-page-mealfunnels-plan'
+                }
+            })
+        });
+      });
+      </script>
   </body>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
     integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
-    
-   
   
   </html>
   
@@ -713,7 +744,5 @@
   
         
           
-  
-        
-          
-
+   
+ 

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+   
+  <!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -31,7 +33,7 @@
     background: linear-gradient(to right, #9306e4, #f6d365);
     padding: 20px;
     margin-top: 20px;
-    border-radius: 30px;
+    border-radius: 10px;
     text-align: center;
     text-shadow: #000000;
     animation: blink 1s linear infinite;
@@ -707,19 +709,11 @@
     
    
   <script>
-    $(document).ready(function () {
-      $('#bootstrapForm').submit(function (event) {
-        event.preventDefault();
-        var extraData = {};
-        $('#bootstrapForm').ajaxSubmit({
-          data: extraData,
-          dataType: 'jsonp',
-          error: function () {
-            window.location = 'https://buy.stripe.com/test_fZe2ad7HP0pc3oA146';
-          },
-        });
-      });
-    });
+    
+document.getElementById('bootstrapForm').addEventListener('submit', function() {
+    // This function will run after the form is submitted
+    window.location.href = 'https://buy.stripe.com/test_fZe2ad7HP0pc3oA146';
+});
   </script>
   
   </html>
